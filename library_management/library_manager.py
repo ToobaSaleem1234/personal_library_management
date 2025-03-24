@@ -347,7 +347,7 @@ elif st.session_state.current_view == 'search':
                             <p><span class={"read-badge" if book["read_status"] else "unread-badge"}>{'Read' if book['read_status'] else 'Unread'}</span></p>
                             </div>""", unsafe_allow_html=True)
             elif search_term:
-                st.markdown("<div class='warning-message'> No Results Found for {search_term}!</div>",unsafe_allow_html=True)
+                st.markdown(f"<div class='warning-message'> No Results Found for {search_term}!</div>",unsafe_allow_html=True)
 elif st.session_state.current_view == 'stats':
     st.markdown("<h2 class='sub-header'>Library Statistics</h2>", unsafe_allow_html=True)
     if not st.session_state.library:
